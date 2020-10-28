@@ -1,0 +1,554 @@
+@import "variables";
+@import "mixins";
+
+@include mQ(576px) {}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: $fontSize;
+    font-family: $bodyFont;
+    text-align: center;
+
+}
+
+//reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+button,
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3 {
+
+    font-family: $headFont;
+    color: $veryDarkCyan;
+}
+
+.container {
+    width: 88%;
+    margin: 0 auto;
+    text-align: center;
+
+    @include mQ(576px) {
+        width: 80%;
+    }
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+header {
+    padding: 25px 0;
+
+    @include mQ(576px) {
+        padding: 35px 0;
+    }
+
+    .container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        width: 90px;
+        height: 14px;
+
+
+        @include mQ(576px) {
+            width: 150px;
+            height: 23px;
+        }
+    }
+}
+
+.btn button {
+    padding: 0.25rem 0.85rem;
+    font-size: 0.75rem;
+    color: $pink;
+    background-color: transparent;
+    //        box-shadow: 0 0.3rem 0.5rem rgba(, 0.2);
+    border-radius: 2em;
+    font-weight: 600;
+    border: 1.5px solid $pink;
+
+    @include mQ(576px) {
+        padding: 0.5rem 2.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+.hero {
+    margin-top: 75px;
+
+
+
+
+    .container {
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 120px;
+
+        @include mQ(576px) {
+            grid-row-gap: 90px;
+        }
+    }
+
+
+    h1 {
+
+        font-size: 1.6em;
+        letter-spacing: 1.5px;
+        line-height: 1.4;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        @include mQ(576px) {
+            font-size: 2.5em;
+        }
+
+
+    }
+
+    p {
+        font-size: 1.05em;
+        line-height: 1.5;
+        margin-bottom: 45px;
+        font-weight: 400;
+
+        @include mQ(576px) {
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+
+    button {
+        padding: 0.8rem 2.4rem;
+        background-color: $pink;
+        width: 65%;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: white;
+        border-radius: 2em;
+        cursor: pointer;
+        box-shadow: 0 0.3rem 0.5rem rgba($veryDarkCyan, 0.4);
+
+        @include mQ(576px) {
+            padding: 0.9rem 1.7rem;
+            background-color: $pink;
+            width: 33%;
+        }
+
+    }
+
+    img {
+        max-width: 850px;
+    }
+
+}
+
+.statictics {
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        @include mQ(576px) {
+            width: 60%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+
+    .communites,
+    .msgs {
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        @include mQ(576px) {
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
+    }
+
+    .image {
+        width: 25px;
+        height: 20px;
+        margin-left: 82.5px;
+
+        @include mQ(576px) {
+            margin-left: 7.5px;
+        }
+    }
+
+    h1 {
+        font-size: 4.5em;
+        font-family: $bodyFont;
+    }
+
+    p {
+        color: gray;
+        font-size: 1.2em;
+    }
+}
+
+.grid {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 180px;
+        padding-top: 180px;
+        padding-bottom: 180px;
+
+        //        .feature:nth-child(odd) {
+        //            background: url(../images/bg-section-bottom-mobile-2.svg) no-repeat bottom, url(../images/bg-section-top-mobile-1.svg) no-repeat top;
+        //
+        //        }
+        @include mQ(576px) {
+            width: 85%;
+
+            .feature:nth-child(odd) {
+                flex-direction: row-reverse;
+
+            }
+        }
+    }
+
+
+
+    .feature {
+        display: flex;
+        flex-direction: column;
+        //        box-shadow: 0 0 1rem rgba($grayishBlue, 0.2);
+
+        @include mQ(576px) {
+            flex-direction: row;
+            text-align: left;
+
+            .feature-img,
+            .feature-content {
+                width: 40%;
+                padding: 5%;
+            }
+
+        }
+
+    }
+
+
+
+    h3 {
+        margin-top: 75px;
+        margin-bottom: 15px;
+        font-size: 1.5em;
+
+        @include mQ(576px) {
+            font-size: 2em;
+
+        }
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.4;
+        letter-spacing: 0.2px;
+
+        @include mQ(576px) {
+            letter-spacing: normal;
+
+        }
+    }
+}
+
+
+.modal {
+
+    .container {
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    padding-top: 100px;
+    padding-bottom: 250px;
+    text-align: center;
+
+    @include mQ(576px) {
+        padding-bottom: 130px;
+    }
+
+    h1 {
+        font-weight: 700;
+        margin-bottom: 25px;
+        font-size: 1.8em;
+
+        @include mQ(576px) {
+            font-size: 2em;
+        }
+    }
+
+    button {
+        padding: 0.7rem 2.5rem;
+        background-color: $pink;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: white;
+        border-radius: 2em;
+        cursor: pointer;
+        box-shadow: 0 0.3rem 0.5rem rgba($veryDarkCyan, 0.4);
+
+        @include mQ(576px) {
+            width: 27.5%;
+            padding: 1rem 1rem;
+        }
+    }
+
+
+}
+
+.bg {
+    display: block;
+    height: 53px;
+
+    @include mQ(576px) {
+        height: 158px;
+    }
+
+    img {
+        height: 100%;
+    }
+
+
+}
+
+
+
+.ftr-newsletter {
+    margin-bottom: 70px;
+
+    @include mQ(576px) {
+        margin: 0;
+        max-width: 30vw;
+    }
+}
+
+.ftr-newsletter p {
+    margin: 15px 0;
+    font-size: 1.05em;
+
+    @include mQ(576px) {
+        min-width: 370px;
+    }
+}
+
+.ftr-newsletter h2 {
+    font-family: $bodyFont;
+    text-transform: uppercase;
+    color: $veryPaleBlue;
+    font-size: 1.5em;
+
+    @include mQ(576px) {
+        margin-top: 0
+    }
+}
+
+
+.ftr-newsletter form input {
+    outline: transparent;
+    height: 2.5rem;
+    border-radius: 5px;
+    margin: 5px auto;
+    border: transparent;
+    font-weight: 600;
+    width: 100%;
+
+    @include mQ(576px) {
+        margin-bottom: 0;
+    }
+}
+
+.ftr-newsletter form {
+    @include mQ(576px) {
+        display: flex;
+        max-width: 20vw;
+    }
+
+}
+
+#newsletter-input-text {
+    @include mQ(576px) {
+        min-width: 90%;
+    }
+
+
+}
+
+#newsletter-input-text:focus {
+    border: 2px solid $pink;
+}
+
+#newsletter-input-button {
+    width: 8.5rem;
+    background-color: $pink;
+    color: $veryPaleBlue;
+    box-shadow: rgba(0, 0, 0, 0.25);
+    float: right;
+    cursor: pointer;
+
+    @include mQ(576px) {
+        margin-left: 10px;
+        padding: 0 2rem;
+    }
+}
+
+
+footer {
+
+
+    background: $veryDarkCyan;
+    color: $veryPaleBlue;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 20px;
+        text-align: left;
+        padding-top: 70px;
+        padding-bottom: 30px;
+
+        @include mQ(576px) {
+            width: 80%;
+            margin: 0 auto;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .logo figure {
+        margin: 0;
+        display: inline-block;
+    }
+
+    .logo img {
+        filter: contrast(0) brightness(100);
+        max-width: 180px;
+    }
+
+    .logo {
+
+        margin-bottom: 5px;
+        width: 180px;
+        height: 39px;
+
+        @include mQ(576px) {
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 30px;
+            width: 120px;
+            height: 30px;
+        }
+
+
+    }
+
+
+
+    .col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info p {
+        margin-bottom: 15px;
+    }
+
+    .phone,
+    .email {
+        display: flex;
+        margin-top: 4px;
+        margin-bottom: 4px;
+
+
+
+        p {
+            margin-left: 15px;
+            font-size: 0.95em;
+
+            letter-spacing: normal;
+
+            @include mQ(576px) {
+                font-size: 1em;
+                letter-spacing: normal;
+            }
+        }
+    }
+
+
+    .social {
+        ul {
+            display: flex;
+            flex-direction: row;
+            width: 33%;
+            margin-left: 0;
+            justify-content: space-between;
+
+            @include mQ(576px) {
+                width: 12%;
+                margin-left: 0;
+            }
+
+            li {
+
+
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include mQ(576px) {
+                    margin: 0 12.5px 0 0px;
+                }
+
+            }
+
+            i {
+                font-size: 1.75em;
+                color: white;
+            }
+        }
+
+    }
+
+}
